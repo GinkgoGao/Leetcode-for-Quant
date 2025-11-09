@@ -26,7 +26,7 @@ public:
         }
         return res；
     }
-//得这样写，不然超时
+//得这样写，否则用递归的话，就是复杂度炸弹
     int climbStairs(int n) {
         int ans;
         if(n==1) {ans=1;}
