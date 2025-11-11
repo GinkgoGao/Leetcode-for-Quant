@@ -12,6 +12,7 @@
 解释：偷窃 1 号房屋 (金额 = 1) ，然后偷窃 3 号房屋 (金额 = 3)。
      偷窃到的最高金额 = 1 + 3 = 4 。
 
+
 ## C++ 
 
 ```CPP 
@@ -31,7 +32,7 @@ int rob(vector<int>& nums) {
     dp[0] = 0;
     dp[1] = nums[0];
     for (int k = 2; k <= N; k++) {
-        dp[k] = max(dp[k-1], nums[k-1] + dp[k-2]);
+        dp[k] = max(dp[k-1], nums[k-1] + dp[k-2]); //递归思想，偷不偷nums[k-]
     }
     return dp[N];
     }
